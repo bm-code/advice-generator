@@ -25,6 +25,7 @@ picture{display: block;}
 body{
     color: white;
     font-family: var(--manrope);
+    transition: all 0.2s;
 }
 
 /*MOBILE*/
