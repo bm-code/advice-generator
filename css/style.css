@@ -1,0 +1,113 @@
+/* RESET */
+*{box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6,body,p,figure,blockquote{margin: 0;}
+img{max-width: 100%; height: auto; display: block;}
+input[type="text"],input[type="email"], textarea {width: 100%; outline: none;}
+button{border: 1px solid; background: transparent;}
+ul,ol{list-style: none; margin: 0; padding: 0; margin: 0; list-style: none;}
+a, a:hover{text-decoration: none;}
+picture{display: block;}
+
+/*ROOT*/
+
+:root{
+    /*color*/
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(216, 26%, 21%);
+    --dark-grayish-blue: hsl(218, 26%, 8%);
+    /*fuentes*/
+    --manrope: 'Manrope', sans-serif;
+}
+
+/*THEME*/
+
+body{
+    color: white;
+    font-family: var(--manrope);
+}
+
+/*MOBILE*/
+
+.dark-container{
+height: 100vh;
+background-color: var(--dark-grayish-blue);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.advice{
+    max-width: 418px;
+    background-color: var(--grayish-blue);
+    padding: 2.5em 1.5em;
+    margin: auto 1em;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.advice__number{
+    text-transform: uppercase;
+    color: var(--neon-green);
+    font-weight: bold;
+    letter-spacing: .3em;
+    margin-bottom: 2em;
+}
+
+.quote{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.advice__separator-mobile{
+    margin: 1.5em auto;
+}
+
+.advice__separator-desktop{
+    display: none;
+}
+
+.advice-generator{
+    cursor: pointer;
+    border: none;
+    width: 70px;
+    height: 70px;
+    background-color: var(--neon-green);
+    border-radius: 60px;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: box-shadow 0.1s;
+}
+
+.advice-generator:hover{
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.advice-generator img{
+    margin: auto;
+}
+
+/* 768px */
+
+@media (min-width: 768px){
+
+    .advice{
+        max-width: 550px;
+        padding: 3em 2em;
+    }
+
+    .advice__separator-mobile{
+        display: none;
+    }
+    
+    .advice__separator-desktop{
+        display: block;
+        margin: 1.5em auto;
+    }
+
+}/* 768px */
